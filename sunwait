@@ -22,11 +22,12 @@ GetOptions ("lat=f"     => \$lat,
 	    "debug"     => \$debug)
 or die("Error in command line arguments\n");
 
-die usage() if (! defined $lat || ! defined $long);
+die usage("you need to supply the --latitude and --longitude")
+  if (! defined $lat || ! defined $long);
 
-$wait_for = shift || die usage();
+$wait_for = shift || die usage("you need to supply either 'rise' or 'set' as a single trailing argument");
 
-die usage() if ($wait_for ne 'rise' && $wait_for ne 'set');
+die usage("invalid argument - use 'rise' or 'set'") if ($wait_for ne 'rise' && $wait_for ne 'set');
 
 my $sun = DateTime::Event::Sunrise->new(longitude => $long,
                                         latitude  => $lat);
@@ -60,5 +61,10 @@ while ($wait_dt > $dt) {
 exit 0;
 
 sub usage {
-   return "Usage: $0 --lat=xxx.yyy --long=aaa.bbb [--offset=60] [--debug] up|down\n";
+  my $error = shift;
+  my $output;
+  $output .= "Error: $error\n\n" if $error;
+
+  $output .= "Usage: $0 --lat=xxx.yyy --long=aaa.bbb [--offset=60] [--debug] rise|set\n";
+  return $output;
 }
