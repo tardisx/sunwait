@@ -2,8 +2,8 @@
 
 ## Install
 
-You'll need the DateTime::Event::Sunrise module, on debian based systems the package will be called
-libdatetime-event-sunrise-perl.
+You'll need the `DateTime::Event::Sunrise` module, on debian based systems the package will be called
+`libdatetime-event-sunrise-perl`.
 
 Copy the sunwait script to somewhere on your path.
 
@@ -17,7 +17,7 @@ the sun. For example, doing your bitcoin mining operations while the sun provide
 You can also provide an offset to allow time, in case you don't want it to be exactly in time with the 
 sunrise/sunset. The offset is specified in minutes.
 
-The --debug option will show when the script is run and the time it is going to wait for.
+The `--debug` option will show when the script is run and the time it is going to wait for.
 
 Example usage in cron:
 
