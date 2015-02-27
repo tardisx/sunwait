@@ -1,7 +1,16 @@
 # sunwait
 
-Wait for sunset/sunrise. Useful in cron if you need something to happen in sync with the sun. For example,
-doing your bitcoin mining operations while the sun provides the electricity :-)
+## Install
+
+You'll need the DateTime::Event::Sunrise module, on debian based systems the package will be called
+libdatetime-event-sunrise-perl.
+
+Copy the sunwait script to somewhere on your path.
+
+## Details
+
+The script sleeps until sunset or sunrise. Useful in cron if you need something to happen in sync with
+the sun. For example, doing your bitcoin mining operations while the sun provides the electricity :-)
 
     Usage: ./sunwait --lat=xxx.yyy --long=aaa.bbb [--offset=60] [--debug] up|down
 
