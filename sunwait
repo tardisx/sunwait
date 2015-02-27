@@ -2,9 +2,9 @@
 
 use strict;
 use warnings;
-use feature 'say';
 
-# debian/ubuntu users probably need to install only libdatetime-event-sunrise-perl
+# debian/ubuntu users probably need to install only 
+# libdatetime-event-sunrise-perl
 
 use DateTime;
 use DateTime::Event::Sunrise;
