@@ -14,8 +14,8 @@ the sun. For example, doing your bitcoin mining operations while the sun provide
 
     Usage: ./sunwait --lat=xxx.yyy --long=aaa.bbb [--offset=60] [--debug] up|down
 
-You can also provide an offset to allow time, in case you don't want it to be exactly in time with the 
-sunrise/sunset. The offset is specified in minutes.
+You can also provide an offset to alter the time, in case you don't want it to be exactly in time with the 
+sunrise/sunset. The offset is specified in minutes and can be negative or positive.
 
 The `--debug` option will show when the script is run and the time it is going to wait for.
 
